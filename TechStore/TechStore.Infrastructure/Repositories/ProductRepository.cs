@@ -28,13 +28,19 @@ namespace TechStore.Infrastructure.Repositories
            return (Product)_context.Products.Where(i => i.ID == id);
         }
 
-        public  UpdateProducts(Product product)
+        public async Task<bool> UpdateProducts(Product product)
         {
-           try
-           {
-             var update = _context.Products.Update(product);
-                _context.SaveChanges();
+            try
+            {
+                _context.Products.Update(product);
+                await _context.SaveChangesAsync();
 
+                return true;
+
+            }catch(Exception e)
+            {
+                return false;
+            }
         }
     }
 }

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechStore", "TechStore\TechStore.csproj", "{03E5F02B-E78E-48B9-A98C-DBEAFDA4DB11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechStore.Infrastructure", "TechStore.Infrastructure\TechStore.Infrastructure.csproj", "{0D58CC7C-E1DB-461D-A0E9-867B77ADA86E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TechStore.Infrastructure", "TechStore.Infrastructure\TechStore.Infrastructure.csproj", "{0D58CC7C-E1DB-461D-A0E9-867B77ADA86E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechStore.Domain", "TechStore.Domain\TechStore.Domain.csproj", "{B0600FA1-A413-4093-861C-65221E48B0E6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{0D58CC7C-E1DB-461D-A0E9-867B77ADA86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D58CC7C-E1DB-461D-A0E9-867B77ADA86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D58CC7C-E1DB-461D-A0E9-867B77ADA86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0600FA1-A413-4093-861C-65221E48B0E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0600FA1-A413-4093-861C-65221E48B0E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0600FA1-A413-4093-861C-65221E48B0E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0600FA1-A413-4093-861C-65221E48B0E6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
