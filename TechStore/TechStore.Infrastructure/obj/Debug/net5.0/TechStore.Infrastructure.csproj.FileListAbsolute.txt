@@ -1,0 +1,15 @@
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\bin\Debug\net5.0\TechStore.Infrastructure.deps.json
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\bin\Debug\net5.0\TechStore.Infrastructure.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\bin\Debug\net5.0\ref\TechStore.Infrastructure.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\bin\Debug\net5.0\TechStore.Infrastructure.pdb
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\TechStore.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\TechStore.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\TechStore.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\TechStore.Infrastructure.AssemblyInfo.cs
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\TechStore.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\TechStore.Infrastructure.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\ref\TechStore.Infrastructure.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\TechStore.Infrastructure.pdb
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\bin\Debug\net5.0\TechStore.Infrastructure.runtimeconfig.json
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\bin\Debug\net5.0\TechStore.Infrastructure.runtimeconfig.dev.json
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Infrastructure\obj\Debug\net5.0\TechStore.Infrastructure.genruntimeconfig.cache
