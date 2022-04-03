@@ -22,7 +22,7 @@ namespace TechStore.Controllers
             _productService = productService;
         }
 
-        [HttpGet]
+        [HttpGet("CountByStatus")]
         public IActionResult GetProductCountByStatus()
         {
             var productCount = _productService.CountByStatus();
@@ -30,29 +30,29 @@ namespace TechStore.Controllers
             if (string.IsNullOrEmpty(productCount.ResponseMessage))
                 return BadRequest("Count failed");
 
-            if (!productCount.Error)
+            if (productCount.Error)
                 return BadRequest(productCount.ResponseMessage);
 
             return Ok(productCount.ResponseMessage);
         }
        
         [HttpPost("ChangeStatus")]
-        public IActionResult UpdateProductStatus(ChangeStatusRequest changeStatusRequest)
+        public async Task<IActionResult> UpdateProductStatus(ChangeStatusRequest changeStatusRequest)
         {
-            var productStatus = _productService.UpdateProductStatus(changeStatusRequest.Barcode, changeStatusRequest.Status);
+            var productStatus = await _productService.UpdateProductStatus(changeStatusRequest.Barcode, changeStatusRequest.Status);
 
-            if (!productStatus.Error)
+            if (productStatus.Error)
                 return BadRequest(productStatus.ResponseMessage);
 
             return Ok(productStatus.ResponseMessage);
         }
 
         [HttpPost("SellProduct")]
-        public IActionResult SellProduct(SellProductRequest sellProductRequest)
+        public async Task<IActionResult> SellProduct(SellProductRequest sellProductRequest)
         {
-            var productStatus = _productService.SellProduct(sellProductRequest.Barcode);
+            var productStatus = await _productService.SellProduct(sellProductRequest.Barcode);
 
-            if (!productStatus.Error)
+            if (productStatus.Error)
                 return BadRequest(productStatus.ResponseMessage);
 
             return Ok(productStatus.ResponseMessage);

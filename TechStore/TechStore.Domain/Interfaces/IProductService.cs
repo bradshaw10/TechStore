@@ -11,7 +11,7 @@ namespace TechStore.Domain.Interfaces
     public interface IProductService
     {
         ProductResponse CountByStatus();
-        ProductResponse UpdateProductStatus(string barcode, Status status);
-        ProductResponse SellProduct(string barcode);
+        Task<ProductResponse> UpdateProductStatus(string barcode, Status status);
+        Task<ProductResponse> SellProduct(string barcode);
     }
 }

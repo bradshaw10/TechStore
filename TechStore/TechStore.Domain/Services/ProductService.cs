@@ -33,48 +33,48 @@ namespace TechStore.Domain.Services
 
             var soldCount = _productRepository.GetProductsByStatus((int)Status.Sold).Count();
 
-            countMessage = $"Sold Count: {inStockCount}";
+            countMessage += $"Sold Count: {inStockCount}";
 
             return new ProductResponse(countMessage);
         }
 
-        public ProductResponse UpdateProductStatus(string barcode, Status status)
+        public async Task<ProductResponse> UpdateProductStatus(string barcode, Status status)
         {
             var product = GetProduct(barcode);
             if (product == null)
-                return new ProductResponse("Error: Product Does not Exist", false);
+                return new ProductResponse("Error: Product Does not Exist", true);
 
             if (product.Status == status)
-                return new ProductResponse("Nothing to update", false);
+                return new ProductResponse("Nothing to update", true);
 
             product.Status = status;
 
-            var updateProductStatus = _productRepository.UpdateProducts(product);
+            var updateProductStatus = await _productRepository.UpdateProducts(product);
 
-            if(!updateProductStatus.Result)
-                return new ProductResponse("Failed to update", false);
+            if(!updateProductStatus)
+                return new ProductResponse("Failed to update", true);
 
 
             return new ProductResponse("Updated Succsefully");
         }
 
-        public ProductResponse SellProduct(string barcode)
+        public async Task<ProductResponse> SellProduct(string barcode)
         {
             var product = GetProduct(barcode);
             if (product == null)
-                return new ProductResponse("Error: Product Does not Exist", false);
+                return new ProductResponse("Error: Product Does not Exist", true);
 
             if(product.Status == Status.Damaged)
-                return new ProductResponse("Error: Can not sell damaged product", false);
+                return new ProductResponse("Error: Can not sell damaged product", true);
 
             if (product.Status == Status.Sold)
-                return new ProductResponse("Error: Product out of Stock", false);
+                return new ProductResponse("Error: Product out of Stock", true);
 
-            product.Status = Status.Damaged;
-            var updateProductStatus = _productRepository.UpdateProducts(product);
+            product.Status = Status.Sold;
+            var updateProductStatus = await _productRepository.UpdateProducts(product);
 
-            if (!updateProductStatus.Result)
-                return new ProductResponse("Failed to update", false);
+            if (!updateProductStatus)
+                return new ProductResponse("Failed to update", true);
 
             return new ProductResponse("Product Sold");
         }
@@ -82,7 +82,7 @@ namespace TechStore.Domain.Services
         public Product GetProduct(string barcode)
         {
             var product = _productRepository.GetProduct(barcode);
-            return product;
+            return product.First();
         }
     } 
 }

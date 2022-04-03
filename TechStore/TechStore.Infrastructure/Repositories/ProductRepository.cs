@@ -28,11 +28,15 @@ namespace TechStore.Infrastructure.Repositories
             return _context.Products.Where(i => (int)i.Status == status).ToList();
         }
 
-        public Product GetProduct(string barcode)
+        public IEnumerable<Product> GetProduct(string barcode)
         {
-           return (Product)_context.Products.Where(i => i.Barcode == barcode);
+            try {
+                return _context.Products.Where(i => i.Barcode == barcode);
+            }catch(Exception e)
+            {
+                return null;
+            }
         }
-
         public async Task<bool> UpdateProducts(Product product)
         {
             try

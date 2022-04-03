@@ -8,7 +8,7 @@ namespace TechStore.Infrastructure.Interfaces
     {
         IEnumerable<Product> GetAllProducts();
         IEnumerable<Product> GetProductsByStatus(int status);
-        Product GetProduct(string barcode);
+        IEnumerable<Product> GetProduct(string barcode);
         Task<bool> UpdateProducts(Product product);
 
     }
