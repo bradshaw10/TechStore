@@ -39,6 +39,9 @@ namespace TechStore.Controllers
         [HttpPost("ChangeStatus")]
         public async Task<IActionResult> UpdateProductStatus(ChangeStatusRequest changeStatusRequest)
         {
+            if (string.IsNullOrEmpty(changeStatusRequest.Barcode))
+                return BadRequest("Error: Please Submit a valid barcode");
+
             var productStatus = await _productService.UpdateProductStatus(changeStatusRequest.Barcode, changeStatusRequest.Status);
 
             if (productStatus.Error)
@@ -50,6 +53,9 @@ namespace TechStore.Controllers
         [HttpPost("SellProduct")]
         public async Task<IActionResult> SellProduct(SellProductRequest sellProductRequest)
         {
+            if (string.IsNullOrEmpty(sellProductRequest.Barcode))
+                return BadRequest("Error: Please Submit a valid barcode");
+
             var productStatus = await _productService.SellProduct(sellProductRequest.Barcode);
 
             if (productStatus.Error)
