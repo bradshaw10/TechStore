@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using TechStore.Domain.Services;
 using TechStore.Domain.Models;
 using TechStore.Models;
+using TechStore.Domain.Interfaces;
 
 namespace TechStore.Controllers
 {
@@ -14,9 +15,9 @@ namespace TechStore.Controllers
     [Route("[controller]")]
     public class ProductController : ControllerBase
     {
-        private readonly ProductService _productService;
+        private readonly IProductService _productService;
 
-        public ProductController(ProductService productService)
+        public ProductController(IProductService productService)
         {
             _productService = productService;
         }
@@ -35,7 +36,7 @@ namespace TechStore.Controllers
             return Ok(productCount.ResponseMessage);
         }
        
-        [HttpPost]
+        [HttpPost("ChangeStatus")]
         public IActionResult UpdateProductStatus(ChangeStatusRequest changeStatusRequest)
         {
             var productStatus = _productService.UpdateProductStatus(changeStatusRequest.Barcode, changeStatusRequest.Status);
@@ -46,7 +47,7 @@ namespace TechStore.Controllers
             return Ok(productStatus.ResponseMessage);
         }
 
-        [HttpPost]
+        [HttpPost("SellProduct")]
         public IActionResult SellProduct(SellProductRequest sellProductRequest)
         {
             var productStatus = _productService.SellProduct(sellProductRequest.Barcode);

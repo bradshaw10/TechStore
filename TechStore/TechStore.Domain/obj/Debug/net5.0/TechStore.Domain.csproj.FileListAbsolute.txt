@@ -1,0 +1,15 @@
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\bin\Debug\net5.0\TechStore.Domain.deps.json
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\bin\Debug\net5.0\TechStore.Domain.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\bin\Debug\net5.0\ref\TechStore.Domain.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\bin\Debug\net5.0\TechStore.Domain.pdb
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\bin\Debug\net5.0\TechStore.Infrastructure.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\bin\Debug\net5.0\TechStore.Infrastructure.pdb
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\TechStore.Domain.csproj.AssemblyReference.cache
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\TechStore.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\TechStore.Domain.AssemblyInfoInputs.cache
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\TechStore.Domain.AssemblyInfo.cs
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\TechStore.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\TechStore.Domain.csproj.CopyComplete
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\TechStore.Domain.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\ref\TechStore.Domain.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore.Domain\obj\Debug\net5.0\TechStore.Domain.pdb

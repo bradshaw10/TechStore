@@ -7,13 +7,14 @@ using TechStore.Domain.Interfaces;
 using TechStore.Infrastructure.Repositories;
 using TechStore.Domain.Models;
 using TechStore.Infrastructure.Models;
+using TechStore.Infrastructure.Interfaces;
 
 namespace TechStore.Domain.Services
 {
     public class ProductService: IProductService
     {
-        private readonly ProductRepository _productRepository;
-        public ProductService(ProductRepository productRepository)
+        private readonly IProductRepository _productRepository;
+        public ProductService(IProductRepository productRepository)
         {
             _productRepository = productRepository;
 

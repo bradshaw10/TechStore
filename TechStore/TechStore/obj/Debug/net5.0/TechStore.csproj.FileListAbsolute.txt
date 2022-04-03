@@ -90,3 +90,5 @@ C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore\obj\Debug\net5.0\
 C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore\obj\Debug\net5.0\TechStore.RazorTargetAssemblyInfo.cache
 C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore\obj\Debug\net5.0\TechStore.csproj.CopyComplete
 C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore\obj\Debug\net5.0\TechStore.genruntimeconfig.cache
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore\bin\Debug\net5.0\TechStore.Domain.dll
+C:\Users\Eoghan\Documents\GitHub\TechStore\TechStore\TechStore\bin\Debug\net5.0\TechStore.Domain.pdb

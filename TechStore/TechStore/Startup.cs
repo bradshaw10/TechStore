@@ -12,7 +12,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TechStore.Domain.Interfaces;
+using TechStore.Domain.Services;
 using TechStore.Infrastructure.Context;
+using TechStore.Infrastructure.Interfaces;
+using TechStore.Infrastructure.Repositories;
 
 namespace TechStore
 {
@@ -34,7 +38,11 @@ namespace TechStore
             });
 
             services.AddControllers();
-           
+
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IProductService, ProductService>();
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TechStore", Version = "v1" });
