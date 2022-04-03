@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TechStore.Domain\TechStore.Domain.csproj" />
     <ProjectReference Include="..\TechStore.Infrastructure\TechStore.Infrastructure.csproj" />
   </ItemGroup>
 

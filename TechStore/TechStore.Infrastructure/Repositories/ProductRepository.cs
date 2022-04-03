@@ -23,6 +23,11 @@ namespace TechStore.Infrastructure.Repositories
             return _context.Products.ToList();
         }
 
+        public IEnumerable<Product> GetProductsByStatus(int status)
+        {
+            return _context.Products.Where(i => (int)i.Status == status).ToList();
+        }
+
         public Product GetProduct(int id)
         {
            return (Product)_context.Products.Where(i => i.ID == id);
