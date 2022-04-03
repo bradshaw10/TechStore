@@ -8,19 +8,21 @@ namespace TechStore.Domain.Models
 {
     public class ProductResponse
     {
-        public ProductResponse()
+        public string ResponseMessage;
+
+        public ProductResponse() : base()
         {
 
         }
 
-        public ProductResponse(string success) : this()
+        public ProductResponse(string success)
         {
-
+            ResponseMessage = success;
         }
 
-        public ProductResponse(string failure, bool error): this()
+        public ProductResponse(string failure, bool error)
         {
-
+            ResponseMessage = failure;
         }
     }
 }
