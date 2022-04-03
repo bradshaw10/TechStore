@@ -9,7 +9,7 @@ namespace TechStore.Domain.Models
     public class ProductResponse
     {
         public string ResponseMessage;
-
+        public bool Error;
         public ProductResponse() : base()
         {
 
@@ -23,6 +23,7 @@ namespace TechStore.Domain.Models
         public ProductResponse(string failure, bool error)
         {
             ResponseMessage = failure;
+            Error = error;
         }
     }
 }
