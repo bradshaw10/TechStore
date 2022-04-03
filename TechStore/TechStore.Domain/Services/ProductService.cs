@@ -22,18 +22,18 @@ namespace TechStore.Domain.Services
         public ProductResponse CountByStatus()
         {
             var countMessage = string.Empty;
+            
+            var soldCount = _productRepository.GetProductsByStatus((int)Status.Sold).Count();
+
+            countMessage = $"Sold Count: {soldCount} \n";
 
             var inStockCount = _productRepository.GetProductsByStatus((int)Status.inStock).Count();
 
-            countMessage = $"In Stock Count: {inStockCount} \n";
+            countMessage += $"In Stock Count: {inStockCount} \n";
 
             var damagedCount = _productRepository.GetProductsByStatus((int)Status.Damaged).Count();
 
-            countMessage += $"Damaged Count: {damagedCount} \n";
-
-            var soldCount = _productRepository.GetProductsByStatus((int)Status.Sold).Count();
-
-            countMessage += $"Sold Count: {inStockCount}";
+            countMessage += $"Damaged Count: {damagedCount}";
 
             return new ProductResponse(countMessage);
         }
@@ -81,8 +81,13 @@ namespace TechStore.Domain.Services
 
         public Product GetProduct(string barcode)
         {
-            var product = _productRepository.GetProduct(barcode);
-            return product.First();
+            try {
+                var product = _productRepository.GetProduct(barcode);
+                return product.First();
+            }catch(Exception e)
+            {
+                return null;
+            }
         }
     } 
 }
