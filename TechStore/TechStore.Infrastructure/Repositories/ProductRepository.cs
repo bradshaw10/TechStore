@@ -28,9 +28,9 @@ namespace TechStore.Infrastructure.Repositories
             return _context.Products.Where(i => (int)i.Status == status).ToList();
         }
 
-        public Product GetProduct(int id)
+        public Product GetProduct(string barcode)
         {
-           return (Product)_context.Products.Where(i => i.ID == id);
+           return (Product)_context.Products.Where(i => i.Barcode == barcode);
         }
 
         public async Task<bool> UpdateProducts(Product product)
